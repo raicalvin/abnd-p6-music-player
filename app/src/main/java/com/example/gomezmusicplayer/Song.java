@@ -28,6 +28,28 @@ public class Song {
 
     }
 
-    
+    /**
+     *
+     * @return Song title
+     */
+    public String getSongTitle() {
+        return mSongTitle;
+    }
+
+    /**
+     *
+     * @return Artist name
+     */
+    public String getSongArtist() {
+        return mSongArtist;
+    }
+
+    /**
+     *
+     * @return Resource ID for album cover
+     */
+    public int getImageResourceID() {
+        return mImageResourceID;
+    }
 
 }
