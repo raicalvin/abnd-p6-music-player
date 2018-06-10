@@ -7,8 +7,10 @@
 
     <ImageView
         android:id="@+id/library_image"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_vertical"
         android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
@@ -22,7 +24,8 @@
             android:id="@+id/song_library_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Back To You" />
+            tools:text="Back To You"
+            android:textColor="#000"/>
 
         <TextView
             android:id="@+id/artist_library_text_view"
