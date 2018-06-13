@@ -1,7 +1,12 @@
 package com.example.gomezmusicplayer;
 
+import android.content.Intent;
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -37,5 +42,21 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
 
+
+        listView.setOnItemClickListener(mMessageClickedHandler);
+
+
+
     }
+
+    // Create a message handling object as an anonymous class.
+    private AdapterView.OnItemClickListener mMessageClickedHandler = new AdapterView.OnItemClickListener() {
+        public void onItemClick(AdapterView parent, View v, int position, long id) {
+            // Do something in response to the click
+            Log.i("MainActivity", "onItemClick: OMG IT GOT PRESSED!!!");
+            Intent intent = new Intent(MainActivity.this, NowPlayingActivity.class);
+            startActivity(intent);
+        }
+    };
+
 }
