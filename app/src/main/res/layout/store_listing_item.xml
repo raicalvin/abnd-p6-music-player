@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
+    android:background="@drawable/ic_bg_red_gradient"
     android:paddingTop="36dp">
 
     <ImageView
@@ -22,29 +22,29 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/store_listing_song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal"
             android:text="Back To You"
             android:textColor="#fff"
-            android:textSize="18sp"
-            android:id="@+id/store_listing_song_title"/>
+            android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/store_listing_artist_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal"
             android:text="Selena Gomez"
-            android:textColor="#fff"
-            android:id="@+id/store_listing_artist_name"/>
+            android:textColor="#fff" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/button_background"
             android:gravity="center_horizontal|center_vertical"
             android:padding="12dp"
@@ -55,8 +55,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
             android:background="@drawable/button_background"
             android:gravity="center_horizontal|center_vertical"
             android:padding="12dp"

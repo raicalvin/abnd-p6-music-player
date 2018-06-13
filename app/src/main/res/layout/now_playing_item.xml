@@ -67,7 +67,7 @@
             android:layout_weight="1"
             android:src="@drawable/ic_shop_black_24dp"
             android:layout_toLeftOf="@id/icon_repeat"
-            android:id="@+id/icon_shuffle"
+            android:id="@+id/icon_shopping"
             android:tint="#fff"/>
 
 
