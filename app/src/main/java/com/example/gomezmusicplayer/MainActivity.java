@@ -13,6 +13,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    ListView listView;
+
+    Intent intent;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,15 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         SongAdapter adapter = new SongAdapter(this, songs);
 
-        ListView listView = findViewById(R.id.list_songs);
+        listView = findViewById(R.id.list_songs);
 
         listView.setAdapter(adapter);
 
-
-
         listView.setOnItemClickListener(mMessageClickedHandler);
-
-
 
     }
 
@@ -54,7 +55,18 @@ public class MainActivity extends AppCompatActivity {
         public void onItemClick(AdapterView parent, View v, int position, long id) {
             // Do something in response to the click
             Log.i("MainActivity", "onItemClick: OMG IT GOT PRESSED!!!");
-            Intent intent = new Intent(MainActivity.this, NowPlayingActivity.class);
+            Song songValue = (Song) listView.getItemAtPosition( position );
+            String songName = songValue.getSongTitle();
+            String artistName = songValue.getSongArtist();
+            Log.i("Something", "MainActivityClick: " + songName);
+            Log.i("Something", "MainActivityClick: " + artistName);
+
+
+            intent = new Intent(MainActivity.this, NowPlayingActivity.class);
+
+            intent.putExtra("SONG_TITLE", songName);
+            intent.putExtra("ARTIST_NAME", artistName);
+
             startActivity(intent);
         }
     };
