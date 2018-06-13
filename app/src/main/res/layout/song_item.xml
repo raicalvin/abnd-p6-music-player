@@ -26,13 +26,14 @@
             android:layout_height="wrap_content"
             tools:text="Back To You"
             android:textSize="18sp"
-            android:textColor="#000"/>
+            android:textColor="#f4f4f4"/>
 
         <TextView
             android:id="@+id/artist_library_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Selena Gomez" />
+            tools:text="Selena Gomez"
+            android:textColor="#d2d2d2"/>
 
     </LinearLayout>
 
