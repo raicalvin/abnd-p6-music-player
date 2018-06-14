@@ -15,13 +15,14 @@ public class NowPlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.now_playing_item);
 
+        // Receive the incoming intent
         Intent receivedIntent = getIntent();
 
+        // Retrieve the song and artist names from the incoming intent
         final String incomingSongName = receivedIntent.getStringExtra("SONG_TITLE");
         final String incomingArtistName = receivedIntent.getStringExtra("ARTIST_NAME");
 
-        Log.i("What Up", "Seeeeleeeeeeeena: " + incomingSongName);
-
+        // Update the Views in the layout
         TextView songTitleTextView = (TextView) findViewById(R.id.song_title_text_view);
         songTitleTextView.setText(incomingSongName);
 
@@ -30,6 +31,7 @@ public class NowPlayingActivity extends AppCompatActivity {
 
         ImageView shoppingBagTextView = (ImageView) findViewById(R.id.icon_shopping);
 
+        // Setup onClickListener on shopping icon to go to buying activity
         shoppingBagTextView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent openStoreListingIntent = new Intent(NowPlayingActivity.this, StoreListingActivity.class);

@@ -24,11 +24,8 @@ public class StoreListingActivity extends AppCompatActivity {
         Log.i("StoreListingActivity", "store listing song name " + incomingSongName);
         Log.i("StoreListingActivity", "store listing artist name " + incomingArtistName);
 
-
         songTitleTextView.setText(incomingSongName);
         artistNameTextView.setText(incomingArtistName);
-
-
-
+        
     }
 }

@@ -23,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.library_list);
 
+        // Create an ArrayList to hold all the Song objects
         ArrayList<Song> songs = new ArrayList<>();
 
+        // Create Song objects and instantiate them with the correct information
         songs.add(new Song("Back To You", "Selena Gomez", R.drawable.cover_stars_dance));
         songs.add(new Song("Stars Dance", "Selena Gomez", R.drawable.cover_stars_dance));
         songs.add(new Song("Come And Get It", "Selena Gomez", R.drawable.cover_stars_dance));
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Song("A Year Without Rain", "Selena Gomez", R.drawable.cover_stars_dance));
         songs.add(new Song("Love Will Remember", "Selena Gomez", R.drawable.cover_stars_dance));
 
+        // Create custom adapter
         SongAdapter adapter = new SongAdapter(this, songs);
 
         listView = findViewById(R.id.list_songs);
@@ -54,16 +57,15 @@ public class MainActivity extends AppCompatActivity {
     private AdapterView.OnItemClickListener mMessageClickedHandler = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView parent, View v, int position, long id) {
             // Do something in response to the click
-            Log.i("MainActivity", "onItemClick: OMG IT GOT PRESSED!!!");
             Song songValue = (Song) listView.getItemAtPosition( position );
             String songName = songValue.getSongTitle();
             String artistName = songValue.getSongArtist();
-            Log.i("Something", "MainActivityClick: " + songName);
-            Log.i("Something", "MainActivityClick: " + artistName);
-
+            Log.i("Testing", "MainActivityClick: " + songName);
+            Log.i("Testing", "MainActivityClick: " + artistName);
 
             intent = new Intent(MainActivity.this, NowPlayingActivity.class);
 
+            // Add additional information to the intent to pull song and artist name in NowPlayingActivity
             intent.putExtra("SONG_TITLE", songName);
             intent.putExtra("ARTIST_NAME", artistName);
 
