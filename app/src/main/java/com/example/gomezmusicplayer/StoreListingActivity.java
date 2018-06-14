@@ -26,6 +26,6 @@ public class StoreListingActivity extends AppCompatActivity {
 
         songTitleTextView.setText(incomingSongName);
         artistNameTextView.setText(incomingArtistName);
-        
+
     }
 }
