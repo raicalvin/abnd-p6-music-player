@@ -16,7 +16,9 @@ This project was developed for my Udacity Android basics Nanodegree Grow With Go
 
 I wanted to implement a dark UI for the list of songs and utilize Material Design icons to communicate familiarity to the user while they navigate through the app. The album cover for each song takes up most of the screen real estate with the playback controls being centered at the bottom of the screen. 
 
-![](http://placekitten.com/300/200) ![](http://placekitten.com/300/200)
+![](https://github.com/raicalvin/pictures/blob/master/pix-abnd-p6-music-player/pic1.png)
+![](https://github.com/raicalvin/pictures/blob/master/pix-abnd-p6-music-player/pic2.png)
+![](https://github.com/raicalvin/pictures/blob/master/pix-abnd-p6-music-player/pic3.png)
 
 ## User Experience
 
