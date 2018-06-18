@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
         songsList.add(new Song("Love Will Remember", "Selena Gomez", R.drawable.cover_stars_dance));
 
         // Create custom adapter
-        SongAdapter adapter = new SongAdapter(this, songsList);
+        SongAdapter songsAdapter = new SongAdapter(this, songsList);
 
         listView = findViewById(R.id.list_songs);
 
-        listView.setAdapter(adapter);
+        listView.setAdapter(songsAdapter);
 
         listView.setOnItemClickListener(mMessageClickedHandler);
 
