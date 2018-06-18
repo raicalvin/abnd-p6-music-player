@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
             intent = new Intent(MainActivity.this, NowPlayingActivity.class);
 
             // Add additional information to the intent to pull song and artist name in NowPlayingActivity
-            intent.putExtra("SONG_TITLE", songName);
-            intent.putExtra("ARTIST_NAME", artistName);
+            intent.putExtra(Constants.SONG_TITLE, songName);
+            intent.putExtra(Constants.ARTIST_NAME, artistName);
 
             startActivity(intent);
         }

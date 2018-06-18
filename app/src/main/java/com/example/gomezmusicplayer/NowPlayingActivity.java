@@ -36,8 +36,8 @@ public class NowPlayingActivity extends AppCompatActivity {
         shoppingBagTextView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent openStoreListingIntent = new Intent(NowPlayingActivity.this, StoreListingActivity.class);
-                openStoreListingIntent.putExtra("SONG_TITLE", incomingSongName);
-                openStoreListingIntent.putExtra("ARTIST_NAME", incomingArtistName);
+                openStoreListingIntent.putExtra(Constants.SONG_TITLE, incomingSongName);
+                openStoreListingIntent.putExtra(Constants.ARTIST_NAME, incomingArtistName);
                 startActivity(openStoreListingIntent);
 
             }
