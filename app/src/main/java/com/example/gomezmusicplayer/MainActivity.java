@@ -24,26 +24,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.library_list);
 
         // Create an ArrayList to hold all the Song objects
-        ArrayList<Song> songs = new ArrayList<>();
+        ArrayList<Song> songsList = new ArrayList<>();
 
         // Create Song objects and instantiate them with the correct information
-        songs.add(new Song("Back To You", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Stars Dance", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Come And Get It", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Bad Liar", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Birthday", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Kill 'Em With Kindness", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Wolves", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Hands To Myself", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Same Old Love", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("The Heart Wants What It Wants", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Slow Down", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Me And The Rhythm", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("A Year Without Rain", "Selena Gomez", R.drawable.cover_stars_dance));
-        songs.add(new Song("Love Will Remember", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Back To You", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Stars Dance", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Come And Get It", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Bad Liar", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Birthday", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Kill 'Em With Kindness", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Wolves", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Hands To Myself", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Same Old Love", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("The Heart Wants What It Wants", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Slow Down", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Me And The Rhythm", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("A Year Without Rain", "Selena Gomez", R.drawable.cover_stars_dance));
+        songsList.add(new Song("Love Will Remember", "Selena Gomez", R.drawable.cover_stars_dance));
 
         // Create custom adapter
-        SongAdapter adapter = new SongAdapter(this, songs);
+        SongAdapter adapter = new SongAdapter(this, songsList);
 
         listView = findViewById(R.id.list_songs);
 
